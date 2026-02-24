@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadDashboard()">
+
+<div class="container">
+    <h2>Student Dashboard</h2>
+
+    <p><strong>Enrolment Number:</strong> 
+        <span id="displayEnrol"></span>
+    </p>
+
+    <h3>Select Your Elective Subject</h3>
+
+    <form onsubmit="return saveSubject()">
+        <div class="radio-group">
+            <input type="radio" name="subject" value="NLP" required> NLP<br>
+            <input type="radio" name="subject" value="IoT"> IoT<br>
+            <input type="radio" name="subject" value="DevOps"> DevOps<br>
+        </div>
+
+        <button type="submit">Save Selection</button>
+    </form>
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
